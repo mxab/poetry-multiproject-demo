@@ -1,9 +1,0 @@
-README.rst
-setup.py
-corelib/__init__.py
-corelib/now.py
-corelib.egg-info/PKG-INFO
-corelib.egg-info/SOURCES.txt
-corelib.egg-info/dependency_links.txt
-corelib.egg-info/requires.txt
-corelib.egg-info/top_level.txt
