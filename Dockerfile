@@ -10,6 +10,6 @@ COPY server /app/server
 
 
 WORKDIR /app/server
-RUN poetry install --no-dev -n
+RUN poetry install -vvv --no-dev -n
 CMD poetry run env FLASK_APP=server/server.py flask run
 
