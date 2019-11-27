@@ -1,12 +1,15 @@
 FROM python:3.7
 
 RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | POETRY_PREVIEW=1 python
-
+EXPOSE 5000
 ENV PATH "/root/.poetry/bin:$PATH"
 
-COPY cli cli
-COPY corelib corelib
-COPY util util
-COPY server server
+COPY corelib /app/corelib
+COPY util /app/util
+COPY server /app/server
 
-RUN cd server && poetry install --no-dev -n
+
+WORKDIR /app/server
+RUN poetry install --no-dev -n
+CMD poetry run env FLASK_APP=server/server.py flask run
+
