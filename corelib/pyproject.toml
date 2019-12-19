@@ -5,9 +5,9 @@ description = ""
 authors = ["Max Fröhlich <maxbruchmann@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6"
 pendulum = "^2.0.5"
-util = {path = "../util"}
+app-utils = {path = "../app-utils/"}
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 
